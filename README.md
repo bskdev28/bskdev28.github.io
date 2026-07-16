@@ -27,7 +27,7 @@ Merge ships, hold the line. Asteroids fall, your fleet fires back — fuse two s
 
 A new puzzle every day. Simple to pick up, easy to keep coming back to.
 
-<a href="https://play.google.com/store/apps/details?id=YOUR_DAILY_PUZZLES_PACKAGE_ID">
+<a href="https://play.google.com/store/apps/details?id=com.bskdev.dailypuzzles">
   <img alt="Get it on Google Play" height="60"
        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
 </a>
