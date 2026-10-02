@@ -12,16 +12,6 @@
 
 ## Games
 
-### 🛰️ Orbit Defense
-
-Merge ships, hold the line. Asteroids fall, your fleet fires back — fuse two ships of the same level and watch them get meaner.
-
-<a href="https://play.google.com/store/apps/details?id=com.bskdev.orbitdefense">
-  <img alt="Get it on Google Play" height="60"
-       src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-</a>
-
-<br>
 
 ### 🧩 Daily Puzzles
 
