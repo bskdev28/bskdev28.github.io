@@ -5,49 +5,182 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Block Nook</title>
 <style>
-  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; }
+  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; --chip: #ffffff; }
   @media (prefers-color-scheme: dark) {
-    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; }
+    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; --chip: #2f2852; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  header { background: var(--brand); color: #fff; padding: 20px 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+  header { background: var(--brand); color: #fff; padding: 18px 16px; }
   header h1 { margin: 0 auto; max-width: 760px; font-size: 22px; }
+  .langs { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px;
+    background: var(--bg); border-bottom: 1px solid rgba(127, 127, 127, 0.2); scrollbar-width: none; }
+  .langs::-webkit-scrollbar { display: none; }
+  .langs button { flex: none; border: 2px solid var(--brand); background: var(--chip); color: var(--ink);
+    border-radius: 999px; padding: 6px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+  .langs button.on { background: var(--brand); color: #fff; }
   main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
-  nav { margin: 16px 0; font-weight: 600; }
   section { background: var(--card); border-radius: 16px; padding: 4px 20px 16px; margin: 16px 0; }
   h2 { font-size: 22px; margin: 20px 0 8px; }
   h3 { font-size: 17px; margin: 20px 0 4px; }
-  p, li { color: var(--ink); }
-  a { color: var(--link); }
+  a { color: var(--link); overflow-wrap: anywhere; }
   footer { color: var(--soft); font-size: 14px; text-align: center; padding: 16px; }
 </style>
 </head>
 <body>
 <header><h1>Block Nook</h1></header>
+<nav class="langs" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="tr" lang="tr">Türkçe</button><button type="button" data-lang="de" lang="de">Deutsch</button><button type="button" data-lang="fr" lang="fr">Français</button><button type="button" data-lang="es" lang="es">Español</button><button type="button" data-lang="it" lang="it">Italiano</button><button type="button" data-lang="pt" lang="pt">Português</button><button type="button" data-lang="ru" lang="ru">Русский</button><button type="button" data-lang="ar" lang="ar">العربية</button><button type="button" data-lang="hi" lang="hi">हिन्दी</button><button type="button" data-lang="ja" lang="ja">日本語</button><button type="button" data-lang="ko" lang="ko">한국어</button><button type="button" data-lang="zh" lang="zh">简体中文</button></nav>
 <main>
-<nav><a href="#en">English</a> · <a href="#tr">Türkçe</a></nav>
-<section id="en" lang="en">
-<h2>Block Nook</h2>
+<section id="lang-en" data-code="en" lang="en" dir="ltr">
 <p>A cozy block-fitting puzzle: fill every empty square of the board with the given pieces, working around the bolted blocks.</p>
 <h3>Support</h3>
 <p>Questions, bugs or purchase problems: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Please add the Player ID shown in Settings.</p>
 <ul>
-<li><a href="privacy/">Privacy policy</a></li>
-<li><a href="delete-account/">Delete your account</a></li>
+<li><a class="keep-lang" href="privacy/">Privacy policy</a></li>
+<li><a class="keep-lang" href="delete-account/">Delete your account</a></li>
 </ul>
 </section>
-<section id="tr" lang="tr">
-<h2>Block Nook</h2>
+<section id="lang-tr" data-code="tr" lang="tr" dir="ltr" hidden>
 <p>Sevimli bir blok yerleştirme bulmacası: cıvatalı blokların etrafından dolaşarak tahtadaki tüm boş kareleri verilen parçalarla doldur.</p>
 <h3>Destek</h3>
 <p>Soru, hata veya satın alma sorunları için: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Lütfen Ayarlar'da yazan Oyuncu ID'ni ekle.</p>
 <ul>
-<li><a href="privacy/#tr">Gizlilik politikası</a></li>
-<li><a href="delete-account/#tr">Hesabını sil</a></li>
+<li><a class="keep-lang" href="privacy/">Gizlilik politikası</a></li>
+<li><a class="keep-lang" href="delete-account/">Hesabını sil</a></li>
+</ul>
+</section>
+<section id="lang-de" data-code="de" lang="de" dir="ltr" hidden>
+<p>Ein gemütliches Block-Puzzle: Fülle jedes freie Feld des Bretts mit den vorgegebenen Teilen und baue um die verschraubten Blöcke herum.</p>
+<h3>Support</h3>
+<p>Fragen, Fehler oder Probleme mit Käufen: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Bitte gib die Spieler-ID aus den Einstellungen an.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Datenschutzerklärung</a></li>
+<li><a class="keep-lang" href="delete-account/">Konto löschen</a></li>
+</ul>
+</section>
+<section id="lang-fr" data-code="fr" lang="fr" dir="ltr" hidden>
+<p>Un puzzle de blocs tout doux : remplis chaque case vide du plateau avec les pièces données, en contournant les blocs vissés.</p>
+<h3>Assistance</h3>
+<p>Questions, bugs ou problèmes d'achat : <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Merci d'indiquer l'ID joueur affiché dans les Paramètres.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Politique de confidentialité</a></li>
+<li><a class="keep-lang" href="delete-account/">Supprimer ton compte</a></li>
+</ul>
+</section>
+<section id="lang-es" data-code="es" lang="es" dir="ltr" hidden>
+<p>Un acogedor puzle de bloques: llena cada casilla vacía del tablero con las piezas dadas, esquivando los bloques atornillados.</p>
+<h3>Soporte</h3>
+<p>Preguntas, errores o problemas con compras: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Incluye el ID de jugador que aparece en Ajustes.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Política de privacidad</a></li>
+<li><a class="keep-lang" href="delete-account/">Eliminar tu cuenta</a></li>
+</ul>
+</section>
+<section id="lang-it" data-code="it" lang="it" dir="ltr" hidden>
+<p>Un rilassante puzzle a blocchi: riempi ogni casella vuota del tabellone con i pezzi dati, aggirando i blocchi avvitati.</p>
+<h3>Assistenza</h3>
+<p>Domande, bug o problemi con gli acquisti: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Indica l'ID giocatore mostrato nelle Impostazioni.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Informativa sulla privacy</a></li>
+<li><a class="keep-lang" href="delete-account/">Elimina il tuo account</a></li>
+</ul>
+</section>
+<section id="lang-pt" data-code="pt" lang="pt" dir="ltr" hidden>
+<p>Um quebra-cabeça de blocos aconchegante: preencha todos os espaços vazios do tabuleiro com as peças dadas, contornando os blocos parafusados.</p>
+<h3>Suporte</h3>
+<p>Dúvidas, erros ou problemas com compras: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Informe o ID do jogador mostrado nas Configurações.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Política de privacidade</a></li>
+<li><a class="keep-lang" href="delete-account/">Excluir sua conta</a></li>
+</ul>
+</section>
+<section id="lang-ru" data-code="ru" lang="ru" dir="ltr" hidden>
+<p>Уютная головоломка с блоками: заполни все пустые клетки поля данными фигурами, обходя прикрученные блоки.</p>
+<h3>Поддержка</h3>
+<p>Вопросы, ошибки или проблемы с покупками: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. Укажи ID игрока из Настроек.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">Политика конфиденциальности</a></li>
+<li><a class="keep-lang" href="delete-account/">Удалить аккаунт</a></li>
+</ul>
+</section>
+<section id="lang-ar" data-code="ar" lang="ar" dir="rtl" hidden>
+<p>لغز كتل مريح: املأ كل مربع فارغ في اللوحة بالقطع المعطاة، مع الالتفاف حول الكتل المثبتة بالبراغي.</p>
+<h3>الدعم</h3>
+<p>للأسئلة أو الأخطاء أو مشكلات الشراء: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. يُرجى ذكر معرّف اللاعب الظاهر في الإعدادات.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">سياسة الخصوصية</a></li>
+<li><a class="keep-lang" href="delete-account/">حذف حسابك</a></li>
+</ul>
+</section>
+<section id="lang-hi" data-code="hi" lang="hi" dir="ltr" hidden>
+<p>एक आरामदायक ब्लॉक पहेली: बोल्ट से कसे ब्लॉकों के चारों ओर से होते हुए, दिए गए टुकड़ों से बोर्ड का हर खाली खाना भरें।</p>
+<h3>सहायता</h3>
+<p>सवाल, बग या खरीदारी की समस्या: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>. कृपया सेटिंग्स में दिखने वाली खिलाड़ी ID भी लिखें।</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">गोपनीयता नीति</a></li>
+<li><a class="keep-lang" href="delete-account/">अपना खाता हटाएँ</a></li>
+</ul>
+</section>
+<section id="lang-ja" data-code="ja" lang="ja" dir="ltr" hidden>
+<p>ほっこりブロックパズル：ボルトで固定されたブロックを避けながら、渡されたピースで盤面の空きマスをすべて埋めよう。</p>
+<h3>サポート</h3>
+<p>ご質問、不具合、購入のトラブルは <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> まで。設定に表示されるプレイヤーIDを添えてください。</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">プライバシーポリシー</a></li>
+<li><a class="keep-lang" href="delete-account/">アカウントを削除する</a></li>
+</ul>
+</section>
+<section id="lang-ko" data-code="ko" lang="ko" dir="ltr" hidden>
+<p>포근한 블록 퍼즐: 볼트로 고정된 블록을 피해 주어진 조각으로 보드의 빈칸을 모두 채우세요.</p>
+<h3>고객 지원</h3>
+<p>문의, 버그, 구매 문제는 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>로 보내 주세요. 설정에 표시된 플레이어 ID를 함께 적어 주세요.</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">개인정보 처리방침</a></li>
+<li><a class="keep-lang" href="delete-account/">계정 삭제하기</a></li>
+</ul>
+</section>
+<section id="lang-zh" data-code="zh" lang="zh" dir="ltr" hidden>
+<p>一款温馨的方块拼图：绕开被螺栓固定的方块，用给定的方块填满棋盘上的每一个空格。</p>
+<h3>客服支持</h3>
+<p>如有疑问、错误或购买问题，请联系 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>，并附上设置中显示的玩家 ID。</p>
+<ul>
+<li><a class="keep-lang" href="privacy/">隐私政策</a></li>
+<li><a class="keep-lang" href="delete-account/">删除你的账号</a></li>
 </ul>
 </section>
 </main>
 <footer>© 2026 BSKDev</footer>
+<script>
+(function () {
+  var codes = Array.prototype.map.call(document.querySelectorAll('section[data-code]'), function (s) {
+    return s.getAttribute('data-code');
+  });
+  function pick() {
+    var hash = location.hash.replace('#', '');
+    if (codes.indexOf(hash) >= 0) return hash;
+    var prefs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < prefs.length; i++) {
+      var short = prefs[i].toLowerCase().split('-')[0];
+      if (codes.indexOf(short) >= 0) return short;
+    }
+    return 'en';
+  }
+  function show(code) {
+    codes.forEach(function (c) { document.getElementById('lang-' + c).hidden = c !== code; });
+    document.querySelectorAll('.langs button').forEach(function (b) {
+      var on = b.getAttribute('data-lang') === code;
+      b.classList.toggle('on', on);
+      if (on) b.scrollIntoView({ block: 'nearest', inline: 'center' });
+    });
+    document.querySelectorAll('a.keep-lang').forEach(function (a) { a.hash = code; });
+    document.documentElement.lang = code;
+    if (history.replaceState) history.replaceState(null, '', '#' + code);
+  }
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
+  });
+  show(pick());
+})();
+</script>
 </body>
 </html>

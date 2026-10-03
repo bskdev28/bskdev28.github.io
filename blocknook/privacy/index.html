@@ -5,29 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Block Nook · Privacy Policy</title>
 <style>
-  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; }
+  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; --chip: #ffffff; }
   @media (prefers-color-scheme: dark) {
-    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; }
+    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; --chip: #2f2852; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  header { background: var(--brand); color: #fff; padding: 20px 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+  header { background: var(--brand); color: #fff; padding: 18px 16px; }
   header h1 { margin: 0 auto; max-width: 760px; font-size: 22px; }
+  .langs { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px;
+    background: var(--bg); border-bottom: 1px solid rgba(127, 127, 127, 0.2); scrollbar-width: none; }
+  .langs::-webkit-scrollbar { display: none; }
+  .langs button { flex: none; border: 2px solid var(--brand); background: var(--chip); color: var(--ink);
+    border-radius: 999px; padding: 6px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+  .langs button.on { background: var(--brand); color: #fff; }
   main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
-  nav { margin: 16px 0; font-weight: 600; }
   section { background: var(--card); border-radius: 16px; padding: 4px 20px 16px; margin: 16px 0; }
   h2 { font-size: 22px; margin: 20px 0 8px; }
   h3 { font-size: 17px; margin: 20px 0 4px; }
-  p, li { color: var(--ink); }
-  a { color: var(--link); }
+  a { color: var(--link); overflow-wrap: anywhere; }
   footer { color: var(--soft); font-size: 14px; text-align: center; padding: 16px; }
 </style>
 </head>
 <body>
 <header><h1>Block Nook · Privacy Policy</h1></header>
+<nav class="langs" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="tr" lang="tr">Türkçe</button><button type="button" data-lang="de" lang="de">Deutsch</button><button type="button" data-lang="fr" lang="fr">Français</button><button type="button" data-lang="es" lang="es">Español</button><button type="button" data-lang="it" lang="it">Italiano</button><button type="button" data-lang="pt" lang="pt">Português</button><button type="button" data-lang="ru" lang="ru">Русский</button><button type="button" data-lang="ar" lang="ar">العربية</button><button type="button" data-lang="hi" lang="hi">हिन्दी</button><button type="button" data-lang="ja" lang="ja">日本語</button><button type="button" data-lang="ko" lang="ko">한국어</button><button type="button" data-lang="zh" lang="zh">简体中文</button></nav>
 <main>
-<nav><a href="#en">English</a> · <a href="#tr">Türkçe</a></nav>
-<section id="en" lang="en">
+<section id="lang-en" data-code="en" lang="en" dir="ltr">
 <h2>PRIVACY POLICY</h2>
 <p>Last updated: 2 October 2026</p>
 <p>This policy explains what data Block Nook ("the game") uses and why. The game is made by BSKDev. Questions: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
@@ -58,7 +62,7 @@
 <h3>9. Changes</h3>
 <p>If this policy changes, the new version will be published here with a new date.</p>
 </section>
-<section id="tr" lang="tr">
+<section id="lang-tr" data-code="tr" lang="tr" dir="ltr" hidden>
 <h2>GİZLİLİK POLİTİKASI</h2>
 <p>Son güncelleme: 2 Ekim 2026</p>
 <p>Bu metin Block Nook ("oyun") hangi verileri neden kullandığını açıklar. Oyun BSKDev tarafından geliştirilmiştir. Sorular için: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
@@ -89,7 +93,380 @@
 <h3>9. Değişiklikler</h3>
 <p>Bu politika değişirse yeni sürüm yeni tarihle burada yayımlanır.</p>
 </section>
+<section id="lang-de" data-code="de" lang="de" dir="ltr" hidden>
+<h2>DATENSCHUTZERKLÄRUNG</h2>
+<p>Letzte Aktualisierung: 2. Oktober 2026</p>
+<p>Diese Erklärung beschreibt, welche Daten Block Nook („das Spiel") verwendet und warum. Das Spiel wird von BSKDev entwickelt. Fragen: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Auf deinem Gerät gespeicherte Daten</h3>
+<p>Dein Fortschritt (Level, Sterne, Münzen, Tipps, Einstellungen, gewählter Name und Avatar) wird auf deinem Gerät gespeichert, damit du offline spielen kannst.</p>
+<h3>2. Online-Funktionen</h3>
+<p>Wenn du online bist, meldet dich das Spiel über Google Firebase mit einem anonymen Konto an (eine zufällige ID, ohne E-Mail-Adresse und Passwort). Wir speichern:</p>
+<ul>
+<li>deinen Anzeigenamen und deinen Avatar,</li>
+<li>deine Gesamtzahl an Sternen und deine Tagesrätsel-Serie,</li>
+<li>dein Land, ermittelt aus der Regionseinstellung deines Geräts, für die Länder-Rangliste,</li>
+<li>eine Sicherungskopie deines Spielfortschritts,</li>
+<li>einen Nachweis deiner Käufe (Produkt und Datum), damit wir dir bei Problemen helfen können.</li>
+</ul>
+<p>Wir erheben weder deinen echten Namen noch deine Telefonnummer, deine Kontakte oder deinen genauen Standort.</p>
+<h3>3. Fortschritt mit Apple oder Google sichern</h3>
+<p>Wenn du „Fortschritt sichern" wählst, wird dein anonymes Konto mit deinem Apple- oder Google-Konto verknüpft. Firebase Authentication speichert dann eine Anmelde-ID und die E-Mail-Adresse, die der Anbieter weitergibt (bei Apple kannst du sie verbergen). Wir verwenden sie nur, um deinen Fortschritt wiederherzustellen.</p>
+<h3>4. Absturzberichte und Statistiken</h3>
+<p>Wir nutzen Firebase Crashlytics und Google Analytics for Firebase, um Fehler zu finden und das Spiel zu verbessern. Erfasst werden Absturz- und Fehlerdetails (Gerätemodell, System- und App-Version, die Schritte vor dem Fehler) sowie Nutzungsereignisse wie begonnene und abgeschlossene Level. Diese Daten sind mit deiner anonymen Spiel-ID verknüpft, nicht mit deinem Namen.</p>
+<h3>5. Werbung</h3>
+<p>Das Spiel zeigt Werbung über Google AdMob. AdMob kann Gerätekennungen (etwa die Werbe-ID), deine IP-Adresse und Daten zur Interaktion mit Anzeigen verwenden, um Werbung auszuliefern und zu messen. Je nach deiner Auswahl im Einwilligungsdialog kann die Werbung personalisiert sein. Du kannst deine Auswahl jederzeit in den Einstellungen ändern. Mehr dazu: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Käufe</h3>
+<p>In-App-Käufe werden über den App Store oder Google Play abgewickelt. Deine Zahlungsdaten erhalten wir nie.</p>
+<h3>7. Kinder</h3>
+<p>Das Spiel richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine personenbezogenen Daten von ihnen.</p>
+<h3>8. Speicherung und Löschung von Daten</h3>
+<p>Du kannst deinen Fortschritt in den Einstellungen löschen. Unter Einstellungen &gt; Konto löschen werden dein Konto und alle Online-Daten (Name, Sterne, Sicherung, Kaufnachweise) endgültig gelöscht. Du kannst auch mit der in den Einstellungen angezeigten Spieler-ID an <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> schreiben, dann löschen wir sie für dich.</p>
+<h3>9. Änderungen</h3>
+<p>Wenn sich diese Erklärung ändert, wird die neue Fassung hier mit neuem Datum veröffentlicht.</p>
+</section>
+<section id="lang-fr" data-code="fr" lang="fr" dir="ltr" hidden>
+<h2>POLITIQUE DE CONFIDENTIALITÉ</h2>
+<p>Dernière mise à jour : 2 octobre 2026</p>
+<p>Cette politique explique quelles données Block Nook (« le jeu ») utilise et pourquoi. Le jeu est développé par BSKDev. Questions : <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Données stockées sur ton appareil</h3>
+<p>Ta progression (niveaux, étoiles, pièces, indices, paramètres, nom et avatar choisis) est enregistrée sur ton appareil pour que tu puisses jouer hors ligne.</p>
+<h3>2. Fonctions en ligne</h3>
+<p>Quand tu es en ligne, le jeu te connecte avec un compte anonyme (un identifiant aléatoire, sans e-mail ni mot de passe) via Google Firebase. Nous conservons :</p>
+<ul>
+<li>ton nom affiché et ton avatar,</li>
+<li>ton total d'étoiles et ta série de puzzles du jour,</li>
+<li>ton pays, déterminé à partir du réglage de région de ton appareil, pour le classement par pays,</li>
+<li>une copie de sauvegarde de ta progression,</li>
+<li>un historique de tes achats (produit et date) pour pouvoir t'aider en cas de problème.</li>
+</ul>
+<p>Nous ne collectons ni ton vrai nom, ni ton numéro de téléphone, ni tes contacts, ni ta position précise.</p>
+<h3>3. Sauvegarder ta progression avec Apple ou Google</h3>
+<p>Si tu choisis « Sauvegarder », ton compte anonyme est associé à ton compte Apple ou Google. Firebase Authentication conserve alors un identifiant de connexion et l'adresse e-mail transmise par le fournisseur (Apple te permet de la masquer). Nous l'utilisons uniquement pour restaurer ta progression.</p>
+<h3>4. Rapports de plantage et statistiques</h3>
+<p>Nous utilisons Firebase Crashlytics et Google Analytics for Firebase pour trouver les bugs et améliorer le jeu. Ils collectent les détails des plantages et des erreurs (modèle d'appareil, version du système et de l'app, étapes précédant l'erreur) et des événements d'utilisation comme les niveaux commencés et terminés. Ces données sont liées à ton identifiant de jeu anonyme, pas à ton nom.</p>
+<h3>5. Publicité</h3>
+<p>Le jeu affiche des publicités via Google AdMob. AdMob peut utiliser des identifiants d'appareil (comme l'identifiant publicitaire), ton adresse IP et les données d'interaction avec les annonces pour afficher et mesurer les publicités. Selon tes choix dans la fenêtre de consentement, les publicités peuvent être personnalisées. Tu peux modifier ton choix à tout moment dans les Paramètres. En savoir plus : <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Achats</h3>
+<p>Les achats intégrés sont gérés par l'App Store ou Google Play. Nous ne recevons jamais tes informations de paiement.</p>
+<h3>7. Enfants</h3>
+<p>Le jeu ne s'adresse pas aux enfants de moins de 13 ans et nous ne collectons pas sciemment de données personnelles les concernant.</p>
+<h3>8. Conservation et suppression des données</h3>
+<p>Tu peux réinitialiser ta progression dans les Paramètres. Paramètres &gt; Supprimer le compte efface définitivement ton compte et toutes tes données en ligne (nom, étoiles, sauvegarde, historique d'achats). Tu peux aussi écrire à <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> en indiquant l'ID joueur affiché dans les Paramètres, et nous les supprimerons pour toi.</p>
+<h3>9. Modifications</h3>
+<p>Si cette politique change, la nouvelle version sera publiée ici avec une nouvelle date.</p>
+</section>
+<section id="lang-es" data-code="es" lang="es" dir="ltr" hidden>
+<h2>POLÍTICA DE PRIVACIDAD</h2>
+<p>Última actualización: 2 de octubre de 2026</p>
+<p>Esta política explica qué datos usa Block Nook («el juego») y por qué. El juego está desarrollado por BSKDev. Preguntas: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Datos guardados en tu dispositivo</h3>
+<p>Tu progreso (niveles, estrellas, monedas, pistas, ajustes, nombre y avatar elegidos) se guarda en tu dispositivo para que puedas jugar sin conexión.</p>
+<h3>2. Funciones en línea</h3>
+<p>Cuando tienes conexión, el juego inicia sesión con una cuenta anónima (un ID aleatorio, sin correo ni contraseña) mediante Google Firebase. Guardamos:</p>
+<ul>
+<li>tu nombre visible y tu avatar,</li>
+<li>tu total de estrellas y tu racha de retos diarios,</li>
+<li>tu país, obtenido de la configuración de región de tu dispositivo, para el ranking por país,</li>
+<li>una copia de seguridad de tu progreso,</li>
+<li>un registro de tus compras (producto y fecha) para poder ayudarte si algo sale mal.</li>
+</ul>
+<p>No recopilamos tu nombre real, tu número de teléfono, tus contactos ni tu ubicación exacta.</p>
+<h3>3. Guardar tu progreso con Apple o Google</h3>
+<p>Si eliges «Guardar progreso», tu cuenta anónima se vincula a tu cuenta de Apple o Google. Firebase Authentication guarda entonces un ID de inicio de sesión y el correo electrónico que comparte el proveedor (Apple te permite ocultarlo). Solo lo usamos para restaurar tu progreso.</p>
+<h3>4. Informes de errores y estadísticas</h3>
+<p>Usamos Firebase Crashlytics y Google Analytics for Firebase para encontrar errores y mejorar el juego. Recopilan detalles de cierres inesperados y errores (modelo del dispositivo, versión del sistema y de la app, los pasos previos al error) y eventos de uso como niveles empezados y terminados. Estos datos están vinculados a tu ID de juego anónimo, no a tu nombre.</p>
+<h3>5. Publicidad</h3>
+<p>El juego muestra anuncios a través de Google AdMob. AdMob puede usar identificadores del dispositivo (como el ID de publicidad), tu dirección IP y datos de interacción con los anuncios para mostrarlos y medirlos. Según lo que elijas en la ventana de consentimiento, los anuncios pueden ser personalizados. Puedes cambiar tu elección en cualquier momento en Ajustes. Más información: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Compras</h3>
+<p>Las compras dentro de la app las gestionan App Store o Google Play. Nunca recibimos tus datos de pago.</p>
+<h3>7. Niños</h3>
+<p>El juego no está dirigido a menores de 13 años y no recopilamos a sabiendas datos personales de ellos.</p>
+<h3>8. Conservación y eliminación de datos</h3>
+<p>Puedes reiniciar tu progreso en Ajustes. Ajustes &gt; Eliminar cuenta borra para siempre tu cuenta y todos tus datos en línea (nombre, estrellas, copia de seguridad, registro de compras). También puedes escribir a <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> con el ID de jugador que aparece en Ajustes y los eliminaremos por ti.</p>
+<h3>9. Cambios</h3>
+<p>Si esta política cambia, la nueva versión se publicará aquí con una nueva fecha.</p>
+</section>
+<section id="lang-it" data-code="it" lang="it" dir="ltr" hidden>
+<h2>INFORMATIVA SULLA PRIVACY</h2>
+<p>Ultimo aggiornamento: 2 ottobre 2026</p>
+<p>Questa informativa spiega quali dati usa Block Nook ("il gioco") e perché. Il gioco è sviluppato da BSKDev. Domande: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Dati salvati sul tuo dispositivo</h3>
+<p>I tuoi progressi (livelli, stelle, monete, aiuti, impostazioni, nome e avatar scelti) vengono salvati sul tuo dispositivo, così puoi giocare offline.</p>
+<h3>2. Funzioni online</h3>
+<p>Quando sei online, il gioco ti collega con un account anonimo (un ID casuale, senza email né password) tramite Google Firebase. Conserviamo:</p>
+<ul>
+<li>il tuo nome visualizzato e il tuo avatar,</li>
+<li>il totale delle tue stelle e la tua serie di puzzle del giorno,</li>
+<li>il tuo paese, ricavato dall'impostazione della regione del dispositivo, per la classifica del paese,</li>
+<li>una copia di backup dei tuoi progressi,</li>
+<li>un registro dei tuoi acquisti (prodotto e data), per poterti aiutare se qualcosa va storto.</li>
+</ul>
+<p>Non raccogliamo il tuo vero nome, il tuo numero di telefono, i tuoi contatti né la tua posizione precisa.</p>
+<h3>3. Salvare i progressi con Apple o Google</h3>
+<p>Se scegli "Salva progressi", il tuo account anonimo viene collegato al tuo account Apple o Google. Firebase Authentication conserva quindi un ID di accesso e l'indirizzo email condiviso dal fornitore (Apple ti permette di nasconderlo). Lo usiamo solo per ripristinare i tuoi progressi.</p>
+<h3>4. Segnalazioni di arresti anomali e statistiche</h3>
+<p>Usiamo Firebase Crashlytics e Google Analytics for Firebase per trovare i bug e migliorare il gioco. Raccolgono i dettagli di arresti anomali ed errori (modello del dispositivo, versione del sistema e dell'app, i passaggi prima dell'errore) ed eventi di utilizzo come i livelli iniziati e completati. Questi dati sono legati al tuo ID di gioco anonimo, non al tuo nome.</p>
+<h3>5. Pubblicità</h3>
+<p>Il gioco mostra pubblicità tramite Google AdMob. AdMob può usare identificatori del dispositivo (come l'ID pubblicità), il tuo indirizzo IP e i dati di interazione con gli annunci per mostrare e misurare la pubblicità. In base alle tue scelte nella finestra di consenso, gli annunci possono essere personalizzati. Puoi cambiare la tua scelta in qualsiasi momento dalle Impostazioni. Maggiori informazioni: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Acquisti</h3>
+<p>Gli acquisti in-app sono gestiti dall'App Store o da Google Play. Non riceviamo mai i tuoi dati di pagamento.</p>
+<h3>7. Bambini</h3>
+<p>Il gioco non è rivolto ai minori di 13 anni e non raccogliamo consapevolmente dati personali che li riguardano.</p>
+<h3>8. Conservazione ed eliminazione dei dati</h3>
+<p>Puoi azzerare i tuoi progressi dalle Impostazioni. Impostazioni &gt; Elimina account cancella per sempre il tuo account e tutti i dati online (nome, stelle, backup, registro degli acquisti). Puoi anche scrivere a <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> indicando l'ID giocatore mostrato nelle Impostazioni e li elimineremo noi.</p>
+<h3>9. Modifiche</h3>
+<p>Se questa informativa cambia, la nuova versione verrà pubblicata qui con una nuova data.</p>
+</section>
+<section id="lang-pt" data-code="pt" lang="pt" dir="ltr" hidden>
+<h2>POLÍTICA DE PRIVACIDADE</h2>
+<p>Última atualização: 2 de outubro de 2026</p>
+<p>Esta política explica quais dados o Block Nook ("o jogo") usa e por quê. O jogo é desenvolvido pela BSKDev. Dúvidas: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Dados guardados no seu aparelho</h3>
+<p>Seu progresso (fases, estrelas, moedas, dicas, configurações, nome e avatar escolhidos) fica salvo no seu aparelho para que você possa jogar offline.</p>
+<h3>2. Recursos on-line</h3>
+<p>Quando você está on-line, o jogo entra com uma conta anônima (um ID aleatório, sem e-mail nem senha) por meio do Google Firebase. Guardamos:</p>
+<ul>
+<li>seu nome de exibição e seu avatar,</li>
+<li>seu total de estrelas e sua sequência de desafios diários,</li>
+<li>seu país, obtido da configuração de região do aparelho, para o ranking do país,</li>
+<li>uma cópia de segurança do seu progresso,</li>
+<li>um registro das suas compras (produto e data), para podermos ajudar se algo der errado.</li>
+</ul>
+<p>Não coletamos seu nome real, número de telefone, contatos nem sua localização exata.</p>
+<h3>3. Salvar o progresso com a Apple ou o Google</h3>
+<p>Se você escolher "Salvar progresso", sua conta anônima é vinculada à sua conta Apple ou Google. O Firebase Authentication então guarda um ID de login e o e-mail compartilhado pelo provedor (a Apple permite ocultá-lo). Usamos isso apenas para restaurar seu progresso.</p>
+<h3>4. Relatórios de falhas e estatísticas</h3>
+<p>Usamos o Firebase Crashlytics e o Google Analytics for Firebase para encontrar erros e melhorar o jogo. Eles coletam detalhes de falhas e erros (modelo do aparelho, versão do sistema e do app, os passos antes do erro) e eventos de uso, como fases iniciadas e concluídas. Esses dados ficam ligados ao seu ID de jogo anônimo, não ao seu nome.</p>
+<h3>5. Publicidade</h3>
+<p>O jogo exibe anúncios pelo Google AdMob. O AdMob pode usar identificadores do aparelho (como o ID de publicidade), seu endereço IP e dados de interação com anúncios para exibir e medir anúncios. Conforme suas escolhas na janela de consentimento, os anúncios podem ser personalizados. Você pode mudar sua escolha a qualquer momento nas Configurações. Saiba mais: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Compras</h3>
+<p>As compras no app são processadas pela App Store ou pelo Google Play. Nunca recebemos seus dados de pagamento.</p>
+<h3>7. Crianças</h3>
+<p>O jogo não é destinado a menores de 13 anos e não coletamos intencionalmente dados pessoais deles.</p>
+<h3>8. Armazenamento e exclusão de dados</h3>
+<p>Você pode zerar seu progresso nas Configurações. Configurações &gt; Excluir conta apaga para sempre sua conta e todos os dados on-line (nome, estrelas, cópia de segurança, registro de compras). Você também pode enviar um e-mail para <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> com o ID do jogador mostrado nas Configurações, e nós excluiremos para você.</p>
+<h3>9. Alterações</h3>
+<p>Se esta política mudar, a nova versão será publicada aqui com uma nova data.</p>
+</section>
+<section id="lang-ru" data-code="ru" lang="ru" dir="ltr" hidden>
+<h2>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
+<p>Последнее обновление: 2 октября 2026 г.</p>
+<p>Эта политика объясняет, какие данные использует Block Nook («игра») и зачем. Игру разрабатывает BSKDev. Вопросы: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>.</p>
+<h3>1. Данные на твоём устройстве</h3>
+<p>Твой прогресс (уровни, звёзды, монеты, подсказки, настройки, выбранное имя и аватар) хранится на устройстве, чтобы можно было играть офлайн.</p>
+<h3>2. Онлайн-функции</h3>
+<p>Когда ты в сети, игра входит в анонимный аккаунт (случайный ID, без электронной почты и пароля) через Google Firebase. Мы храним:</p>
+<ul>
+<li>твоё отображаемое имя и аватар,</li>
+<li>общее число звёзд и серию головоломок дня,</li>
+<li>твою страну, определённую по настройке региона устройства, для рейтинга по стране,</li>
+<li>резервную копию игрового прогресса,</li>
+<li>запись о покупках (товар и дата), чтобы помочь, если что-то пойдёт не так.</li>
+</ul>
+<p>Мы не собираем твоё настоящее имя, номер телефона, контакты или точное местоположение.</p>
+<h3>3. Сохранение прогресса через Apple или Google</h3>
+<p>Если ты выберешь «Сохранить прогресс», анонимный аккаунт будет привязан к твоему аккаунту Apple или Google. Firebase Authentication сохранит идентификатор входа и адрес электронной почты, который передаёт провайдер (Apple позволяет его скрыть). Мы используем его только для восстановления прогресса.</p>
+<h3>4. Отчёты о сбоях и статистика</h3>
+<p>Мы используем Firebase Crashlytics и Google Analytics for Firebase, чтобы находить ошибки и улучшать игру. Они собирают сведения о сбоях и ошибках (модель устройства, версия системы и приложения, действия перед ошибкой) и события использования, например начатые и пройденные уровни. Эти данные связаны с твоим анонимным игровым ID, а не с твоим именем.</p>
+<h3>5. Реклама</h3>
+<p>Игра показывает рекламу через Google AdMob. AdMob может использовать идентификаторы устройства (например, рекламный ID), твой IP-адрес и данные о взаимодействии с рекламой, чтобы показывать и измерять рекламу. В зависимости от твоего выбора в окне согласия реклама может быть персонализированной. Изменить выбор можно в любой момент в Настройках. Подробнее: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. Покупки</h3>
+<p>Покупки в приложении обрабатывают App Store или Google Play. Мы никогда не получаем твои платёжные данные.</p>
+<h3>7. Дети</h3>
+<p>Игра не предназначена для детей младше 13 лет, и мы сознательно не собираем их персональные данные.</p>
+<h3>8. Хранение и удаление данных</h3>
+<p>Сбросить прогресс можно в Настройках. Настройки &gt; Удалить аккаунт навсегда удаляет аккаунт и все онлайн-данные (имя, звёзды, резервную копию, записи о покупках). Также можно написать на <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>, указав ID игрока из Настроек, и мы удалим их за тебя.</p>
+<h3>9. Изменения</h3>
+<p>Если политика изменится, новая версия будет опубликована здесь с новой датой.</p>
+</section>
+<section id="lang-ar" data-code="ar" lang="ar" dir="rtl" hidden>
+<h2>سياسة الخصوصية</h2>
+<p>آخر تحديث: 2 أكتوبر 2026</p>
+<p>توضح هذه السياسة البيانات التي تستخدمها لعبة Block Nook ("اللعبة") وسبب استخدامها. طوّرت BSKDev هذه اللعبة. للأسئلة: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a></p>
+<h3>1. البيانات المحفوظة على جهازك</h3>
+<p>يُحفظ تقدّمك (المراحل والنجوم والعملات والتلميحات والإعدادات والاسم والصورة الرمزية التي اخترتها) على جهازك لتتمكن من اللعب دون اتصال.</p>
+<h3>2. الميزات عبر الإنترنت</h3>
+<p>عندما تكون متصلًا، تسجّل اللعبة دخولك بحساب مجهول الهوية (معرّف عشوائي، دون بريد إلكتروني أو كلمة مرور) باستخدام Google Firebase. نحفظ:</p>
+<ul>
+<li>اسمك الظاهر وصورتك الرمزية،</li>
+<li>مجموع نجومك وسلسلة لغز اليوم،</li>
+<li>بلدك، المأخوذ من إعداد المنطقة في جهازك، لترتيب البلد،</li>
+<li>نسخة احتياطية من تقدّمك في اللعبة،</li>
+<li>سجلًا بمشترياتك (المنتج والتاريخ) لنتمكن من مساعدتك إذا حدثت مشكلة.</li>
+</ul>
+<p>لا نجمع اسمك الحقيقي ولا رقم هاتفك ولا جهات اتصالك ولا موقعك الدقيق.</p>
+<h3>3. حفظ تقدّمك عبر Apple أو Google</h3>
+<p>إذا اخترت "حفظ التقدم"، يُربط حسابك المجهول بحسابك في Apple أو Google. عندها تحتفظ Firebase Authentication بمعرّف تسجيل الدخول وعنوان البريد الإلكتروني الذي يشاركه مزوّد الخدمة (تتيح لك Apple إخفاءه). نستخدمه فقط لاستعادة تقدّمك.</p>
+<h3>4. تقارير الأعطال والإحصاءات</h3>
+<p>نستخدم Firebase Crashlytics وGoogle Analytics for Firebase لاكتشاف الأخطاء وتحسين اللعبة. تجمع هذه الخدمات تفاصيل الأعطال والأخطاء (طراز الجهاز وإصدار النظام والتطبيق والخطوات التي سبقت الخطأ) وأحداث الاستخدام مثل المراحل التي بدأتها وأكملتها. ترتبط هذه البيانات بمعرّف اللعبة المجهول، وليس باسمك.</p>
+<h3>5. الإعلانات</h3>
+<p>تعرض اللعبة إعلانات عبر Google AdMob. قد يستخدم AdMob معرّفات الجهاز (مثل المعرّف الإعلاني) وعنوان IP الخاص بك وبيانات التفاعل مع الإعلانات لعرض الإعلانات وقياسها. بحسب اختياراتك في نافذة الموافقة، قد تكون الإعلانات مخصّصة. يمكنك تغيير اختيارك في أي وقت من الإعدادات. للمزيد: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. المشتريات</h3>
+<p>يتولى App Store أو Google Play معالجة عمليات الشراء داخل التطبيق. لا نتلقى بيانات الدفع الخاصة بك أبدًا.</p>
+<h3>7. الأطفال</h3>
+<p>اللعبة غير موجّهة للأطفال دون 13 عامًا، ولا نجمع عن علم أي بيانات شخصية منهم.</p>
+<h3>8. الاحتفاظ بالبيانات وحذفها</h3>
+<p>يمكنك إعادة تعيين تقدّمك من الإعدادات. يؤدي خيار الإعدادات &gt; حذف الحساب إلى حذف حسابك وكل بياناتك عبر الإنترنت (الاسم والنجوم والنسخة الاحتياطية وسجلات الشراء) نهائيًا. يمكنك أيضًا مراسلتنا على <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> مع معرّف اللاعب الظاهر في الإعدادات وسنحذفها لك.</p>
+<h3>9. التغييرات</h3>
+<p>إذا تغيّرت هذه السياسة، ستُنشر النسخة الجديدة هنا بتاريخ جديد.</p>
+</section>
+<section id="lang-hi" data-code="hi" lang="hi" dir="ltr" hidden>
+<h2>गोपनीयता नीति</h2>
+<p>अंतिम अपडेट: 2 अक्टूबर 2026</p>
+<p>यह नीति बताती है कि Block Nook ("गेम") कौन-सा डेटा इस्तेमाल करता है और क्यों। यह गेम BSKDev ने बनाया है। सवालों के लिए: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a></p>
+<h3>1. आपके डिवाइस पर सहेजा गया डेटा</h3>
+<p>आपकी प्रगति (लेवल, सितारे, सिक्के, संकेत, सेटिंग्स, चुना हुआ नाम और अवतार) आपके डिवाइस पर सहेजी जाती है, ताकि आप ऑफ़लाइन खेल सकें।</p>
+<h3>2. ऑनलाइन सुविधाएँ</h3>
+<p>ऑनलाइन होने पर गेम Google Firebase के ज़रिए आपको एक गुमनाम खाते (एक रैंडम ID, बिना ईमेल या पासवर्ड) से साइन इन करता है। हम सहेजते हैं:</p>
+<ul>
+<li>आपका दिखने वाला नाम और अवतार,</li>
+<li>आपके कुल सितारे और आज की पहेली का लगातार रिकॉर्ड,</li>
+<li>देश की रैंकिंग के लिए आपका देश, जो आपके डिवाइस की क्षेत्र सेटिंग से लिया जाता है,</li>
+<li>आपकी गेम प्रगति की एक बैकअप कॉपी,</li>
+<li>आपकी खरीदारी का रिकॉर्ड (उत्पाद और तारीख), ताकि कुछ गड़बड़ होने पर हम मदद कर सकें।</li>
+</ul>
+<p>हम आपका असली नाम, फ़ोन नंबर, संपर्क या सटीक स्थान इकट्ठा नहीं करते।</p>
+<h3>3. Apple या Google से अपनी प्रगति सहेजना</h3>
+<p>अगर आप "प्रगति सहेजें" चुनते हैं, तो आपका गुमनाम खाता आपके Apple या Google खाते से जुड़ जाता है। तब Firebase Authentication एक साइन-इन ID और प्रदाता द्वारा साझा किया गया ईमेल पता (Apple में आप इसे छिपा सकते हैं) सहेजता है। हम इसका इस्तेमाल सिर्फ़ आपकी प्रगति वापस लाने के लिए करते हैं।</p>
+<h3>4. क्रैश रिपोर्ट और आँकड़े</h3>
+<p>बग ढूँढने और गेम को बेहतर बनाने के लिए हम Firebase Crashlytics और Google Analytics for Firebase का इस्तेमाल करते हैं। ये क्रैश और त्रुटियों का विवरण (डिवाइस मॉडल, सिस्टम और ऐप का संस्करण, त्रुटि से पहले के कदम) और शुरू किए गए व पूरे किए गए लेवल जैसे उपयोग के इवेंट इकट्ठा करते हैं। यह डेटा आपके नाम से नहीं, आपकी गुमनाम गेम ID से जुड़ा होता है।</p>
+<h3>5. विज्ञापन</h3>
+<p>गेम Google AdMob के ज़रिए विज्ञापन दिखाता है। विज्ञापन दिखाने और मापने के लिए AdMob डिवाइस पहचानकर्ताओं (जैसे विज्ञापन ID), आपके IP पते और विज्ञापनों से जुड़ी गतिविधि के डेटा का इस्तेमाल कर सकता है। सहमति वाली विंडो में आपकी पसंद के अनुसार विज्ञापन व्यक्तिगत हो सकते हैं। आप सेटिंग्स से कभी भी अपनी पसंद बदल सकते हैं। ज़्यादा जानकारी: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. खरीदारी</h3>
+<p>इन-ऐप खरीदारी App Store या Google Play संभालते हैं। आपकी भुगतान जानकारी हम तक कभी नहीं पहुँचती।</p>
+<h3>7. बच्चे</h3>
+<p>यह गेम 13 साल से कम उम्र के बच्चों के लिए नहीं है और हम जानबूझकर उनसे कोई निजी डेटा इकट्ठा नहीं करते।</p>
+<h3>8. डेटा रखना और हटाना</h3>
+<p>आप सेटिंग्स में अपनी प्रगति रीसेट कर सकते हैं। सेटिंग्स &gt; खाता हटाएँ आपके खाते और सारे ऑनलाइन डेटा (नाम, सितारे, बैकअप, खरीदारी के रिकॉर्ड) को हमेशा के लिए हटा देता है। आप सेटिंग्स में दिखने वाली खिलाड़ी ID के साथ <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> पर ईमेल भी कर सकते हैं, हम आपके लिए इसे हटा देंगे।</p>
+<h3>9. बदलाव</h3>
+<p>अगर यह नीति बदलती है, तो नया संस्करण नई तारीख के साथ यहाँ प्रकाशित किया जाएगा।</p>
+</section>
+<section id="lang-ja" data-code="ja" lang="ja" dir="ltr" hidden>
+<h2>プライバシーポリシー</h2>
+<p>最終更新日：2026年10月2日</p>
+<p>このポリシーでは、Block Nook（以下「本ゲーム」）がどのようなデータを、なぜ使用するかを説明します。本ゲームは BSKDev が開発しています。お問い合わせ：<a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a></p>
+<h3>1. 端末に保存されるデータ</h3>
+<p>進行状況（ステージ、星、コイン、ヒント、設定、選んだ名前とアバター）は、オフラインでも遊べるように端末に保存されます。</p>
+<h3>2. オンライン機能</h3>
+<p>オンライン時、本ゲームは Google Firebase を使って匿名アカウント（ランダムなID。メールアドレスやパスワードは不要）でログインします。保存するデータ：</p>
+<ul>
+<li>表示名とアバター</li>
+<li>星の合計数とデイリーパズルの連続記録</li>
+<li>国別ランキングのための国（端末の地域設定から取得）</li>
+<li>進行状況のバックアップ</li>
+<li>問題が起きたときにサポートするための購入記録（商品と日付）</li>
+</ul>
+<p>本名、電話番号、連絡先、正確な位置情報は収集しません。</p>
+<h3>3. Apple または Google でデータを保存する</h3>
+<p>「データを保存」を選ぶと、匿名アカウントが Apple または Google のアカウントと連携されます。その際 Firebase Authentication は、ログインIDとプロバイダーから共有されるメールアドレス（Apple では非公開にできます）を保存します。これは進行状況の復元にのみ使用します。</p>
+<h3>4. クラッシュレポートと統計</h3>
+<p>バグを見つけてゲームを改善するために、Firebase Crashlytics と Google Analytics for Firebase を使用します。これらは、クラッシュやエラーの詳細（端末の機種、OSとアプリのバージョン、エラー前の操作）と、ステージの開始・クリアなどの利用イベントを収集します。これらのデータは名前ではなく、匿名のゲームIDに紐づきます。</p>
+<h3>5. 広告</h3>
+<p>本ゲームは Google AdMob を通じて広告を表示します。AdMob は、広告の表示と効果測定のために、端末識別子（広告IDなど）、IPアドレス、広告とのやり取りのデータを使用する場合があります。同意画面での選択によっては、広告がパーソナライズされることがあります。選択は設定からいつでも変更できます。詳しくは：<a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. 購入</h3>
+<p>アプリ内購入は App Store または Google Play が処理します。お支払い情報を当方が受け取ることはありません。</p>
+<h3>7. 子ども</h3>
+<p>本ゲームは13歳未満の子どもを対象としておらず、子どもの個人データを意図的に収集することはありません。</p>
+<h3>8. データの保存と削除</h3>
+<p>進行状況は設定からリセットできます。「設定 &gt; アカウントを削除」で、アカウントとすべてのオンラインデータ（名前、星、バックアップ、購入記録）が完全に削除されます。設定に表示されるプレイヤーIDを添えて <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> にメールしていただければ、こちらで削除することもできます。</p>
+<h3>9. 変更</h3>
+<p>このポリシーを変更する場合は、新しい日付とともにここに掲載します。</p>
+</section>
+<section id="lang-ko" data-code="ko" lang="ko" dir="ltr" hidden>
+<h2>개인정보 처리방침</h2>
+<p>최종 업데이트: 2026년 10월 2일</p>
+<p>이 방침은 Block Nook(이하 "게임")이 어떤 데이터를 왜 사용하는지 설명합니다. 이 게임은 BSKDev가 개발했습니다. 문의: <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a></p>
+<h3>1. 기기에 저장되는 데이터</h3>
+<p>진행 상황(스테이지, 별, 코인, 힌트, 설정, 선택한 이름과 아바타)은 오프라인으로도 플레이할 수 있도록 기기에 저장됩니다.</p>
+<h3>2. 온라인 기능</h3>
+<p>온라인 상태일 때 게임은 Google Firebase를 통해 익명 계정(무작위 ID, 이메일이나 비밀번호 없음)으로 로그인합니다. 저장하는 데이터:</p>
+<ul>
+<li>표시 이름과 아바타</li>
+<li>별의 총 개수와 오늘의 퍼즐 연속 기록</li>
+<li>국가별 랭킹을 위한 국가(기기의 지역 설정에서 가져옴)</li>
+<li>게임 진행 상황의 백업 사본</li>
+<li>문제가 생겼을 때 도와드리기 위한 구매 기록(상품과 날짜)</li>
+</ul>
+<p>실명, 전화번호, 연락처, 정확한 위치는 수집하지 않습니다.</p>
+<h3>3. Apple 또는 Google로 진행 상황 저장</h3>
+<p>"진행 저장"을 선택하면 익명 계정이 Apple 또는 Google 계정에 연결됩니다. 이때 Firebase Authentication은 로그인 ID와 제공업체가 공유하는 이메일 주소(Apple에서는 숨길 수 있음)를 보관합니다. 이 정보는 진행 상황을 복원하는 데만 사용합니다.</p>
+<h3>4. 충돌 보고서와 통계</h3>
+<p>버그를 찾고 게임을 개선하기 위해 Firebase Crashlytics와 Google Analytics for Firebase를 사용합니다. 이들은 충돌 및 오류 정보(기기 모델, 시스템과 앱 버전, 오류 직전의 동작)와 스테이지 시작·완료 같은 이용 이벤트를 수집합니다. 이 데이터는 이름이 아니라 익명 게임 ID에 연결됩니다.</p>
+<h3>5. 광고</h3>
+<p>게임은 Google AdMob을 통해 광고를 표시합니다. AdMob은 광고를 표시하고 측정하기 위해 기기 식별자(광고 ID 등), IP 주소, 광고 상호작용 데이터를 사용할 수 있습니다. 동의 화면에서의 선택에 따라 맞춤형 광고가 표시될 수 있습니다. 선택은 설정에서 언제든지 바꿀 수 있습니다. 자세히 보기: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. 구매</h3>
+<p>인앱 구매는 App Store 또는 Google Play에서 처리합니다. 결제 정보는 저희에게 전달되지 않습니다.</p>
+<h3>7. 아동</h3>
+<p>이 게임은 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
+<h3>8. 데이터 보관 및 삭제</h3>
+<p>설정에서 진행 상황을 초기화할 수 있습니다. 설정 &gt; 계정 삭제를 누르면 계정과 모든 온라인 데이터(이름, 별, 백업, 구매 기록)가 영구적으로 삭제됩니다. 설정에 표시된 플레이어 ID를 적어 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>으로 메일을 보내 주시면 저희가 삭제해 드릴 수도 있습니다.</p>
+<h3>9. 변경</h3>
+<p>이 방침이 변경되면 새 버전을 새 날짜와 함께 여기에 게시합니다.</p>
+</section>
+<section id="lang-zh" data-code="zh" lang="zh" dir="ltr" hidden>
+<h2>隐私政策</h2>
+<p>最后更新：2026年10月2日</p>
+<p>本政策说明 Block Nook（以下简称"本游戏"）使用哪些数据以及原因。本游戏由 BSKDev 开发。如有疑问：<a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a></p>
+<h3>1. 存储在你设备上的数据</h3>
+<p>你的进度（关卡、星星、金币、提示、设置、所选名字和头像）保存在你的设备上，方便你离线游玩。</p>
+<h3>2. 在线功能</h3>
+<p>联网时，本游戏会通过 Google Firebase 使用匿名账号（随机 ID，无需邮箱或密码）登录。我们会存储：</p>
+<ul>
+<li>你的显示名称和头像</li>
+<li>你的星星总数和每日谜题连续天数</li>
+<li>你的国家（取自设备的地区设置），用于本国排行榜</li>
+<li>你的游戏进度备份</li>
+<li>你的购买记录（商品和日期），以便出现问题时为你提供帮助</li>
+</ul>
+<p>我们不会收集你的真实姓名、电话号码、通讯录或精确位置。</p>
+<h3>3. 通过 Apple 或 Google 保存进度</h3>
+<p>如果你选择"保存进度"，你的匿名账号将与你的 Apple 或 Google 账号关联。届时 Firebase Authentication 会保存一个登录 ID 以及提供方共享的电子邮件地址（Apple 允许你隐藏邮箱）。我们仅将其用于恢复你的进度。</p>
+<h3>4. 崩溃报告和统计</h3>
+<p>我们使用 Firebase Crashlytics 和 Google Analytics for Firebase 来发现错误并改进游戏。它们会收集崩溃和错误详情（设备型号、系统和应用版本、出错前的操作）以及关卡开始和完成等使用事件。这些数据与你的匿名游戏 ID 关联，而不是与你的姓名关联。</p>
+<h3>5. 广告</h3>
+<p>本游戏通过 Google AdMob 展示广告。AdMob 可能会使用设备标识符（例如广告 ID）、你的 IP 地址以及广告互动数据来展示和衡量广告。根据你在同意窗口中的选择，广告可能会个性化。你可以随时在设置中更改选择。了解更多：<a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+<h3>6. 购买</h3>
+<p>应用内购买由 App Store 或 Google Play 处理。我们绝不会收到你的支付信息。</p>
+<h3>7. 儿童</h3>
+<p>本游戏不面向 13 岁以下的儿童，我们也不会在知情的情况下收集他们的个人数据。</p>
+<h3>8. 数据的保存与删除</h3>
+<p>你可以在设置中重置进度。在"设置 &gt; 删除账号"中可永久删除你的账号和所有在线数据（名字、星星、备份、购买记录）。你也可以发送邮件至 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> 并附上设置中显示的玩家 ID，我们会为你删除。</p>
+<h3>9. 变更</h3>
+<p>如果本政策发生变更，新版本将连同新日期在此发布。</p>
+</section>
 </main>
 <footer>© 2026 BSKDev</footer>
+<script>
+(function () {
+  var codes = Array.prototype.map.call(document.querySelectorAll('section[data-code]'), function (s) {
+    return s.getAttribute('data-code');
+  });
+  function pick() {
+    var hash = location.hash.replace('#', '');
+    if (codes.indexOf(hash) >= 0) return hash;
+    var prefs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < prefs.length; i++) {
+      var short = prefs[i].toLowerCase().split('-')[0];
+      if (codes.indexOf(short) >= 0) return short;
+    }
+    return 'en';
+  }
+  function show(code) {
+    codes.forEach(function (c) { document.getElementById('lang-' + c).hidden = c !== code; });
+    document.querySelectorAll('.langs button').forEach(function (b) {
+      var on = b.getAttribute('data-lang') === code;
+      b.classList.toggle('on', on);
+      if (on) b.scrollIntoView({ block: 'nearest', inline: 'center' });
+    });
+    document.querySelectorAll('a.keep-lang').forEach(function (a) { a.hash = code; });
+    document.documentElement.lang = code;
+    if (history.replaceState) history.replaceState(null, '', '#' + code);
+  }
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
+  });
+  show(pick());
+})();
+</script>
 </body>
 </html>

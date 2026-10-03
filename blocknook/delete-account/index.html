@@ -5,32 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Block Nook · Delete account</title>
 <style>
-  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; }
+  :root { --ink: #2b2346; --soft: #5e5680; --bg: #fff7e6; --card: #fffdf8; --brand: #453a72; --link: #2a78d0; --chip: #ffffff; }
   @media (prefers-color-scheme: dark) {
-    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; }
+    :root { --ink: #f3eefe; --soft: #c9c1e6; --bg: #1d1833; --card: #262043; --brand: #6a5aa8; --link: #8cc4ff; --chip: #2f2852; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  header { background: var(--brand); color: #fff; padding: 20px 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+  header { background: var(--brand); color: #fff; padding: 18px 16px; }
   header h1 { margin: 0 auto; max-width: 760px; font-size: 22px; }
+  .langs { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px;
+    background: var(--bg); border-bottom: 1px solid rgba(127, 127, 127, 0.2); scrollbar-width: none; }
+  .langs::-webkit-scrollbar { display: none; }
+  .langs button { flex: none; border: 2px solid var(--brand); background: var(--chip); color: var(--ink);
+    border-radius: 999px; padding: 6px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+  .langs button.on { background: var(--brand); color: #fff; }
   main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
-  nav { margin: 16px 0; font-weight: 600; }
   section { background: var(--card); border-radius: 16px; padding: 4px 20px 16px; margin: 16px 0; }
   h2 { font-size: 22px; margin: 20px 0 8px; }
   h3 { font-size: 17px; margin: 20px 0 4px; }
-  p, li { color: var(--ink); }
-  a { color: var(--link); }
+  a { color: var(--link); overflow-wrap: anywhere; }
   footer { color: var(--soft); font-size: 14px; text-align: center; padding: 16px; }
 </style>
 </head>
 <body>
 <header><h1>Block Nook · Delete account</h1></header>
+<nav class="langs" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="tr" lang="tr">Türkçe</button><button type="button" data-lang="de" lang="de">Deutsch</button><button type="button" data-lang="fr" lang="fr">Français</button><button type="button" data-lang="es" lang="es">Español</button><button type="button" data-lang="it" lang="it">Italiano</button><button type="button" data-lang="pt" lang="pt">Português</button><button type="button" data-lang="ru" lang="ru">Русский</button><button type="button" data-lang="ar" lang="ar">العربية</button><button type="button" data-lang="hi" lang="hi">हिन्दी</button><button type="button" data-lang="ja" lang="ja">日本語</button><button type="button" data-lang="ko" lang="ko">한국어</button><button type="button" data-lang="zh" lang="zh">简体中文</button></nav>
 <main>
-<nav><a href="#en">English</a> · <a href="#tr">Türkçe</a></nav>
-<section id="en" lang="en">
+<section id="lang-en" data-code="en" lang="en" dir="ltr">
 <h2>Delete your Block Nook account</h2>
 <h3>In the game</h3>
-<p>Open Settings and tap <b>Delete account</b>, then confirm. Your account and online data are deleted right away.</p>
+<p>Open Settings, tap “Delete account” and confirm. Your account and online data are deleted right away.</p>
 <h3>By email</h3>
 <p>Write to <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> with the Player ID shown in Settings. We delete the account within 30 days and reply when it is done.</p>
 <h3>What is deleted</h3>
@@ -39,12 +43,12 @@
 <li>Display name, avatar, stars and leaderboard entry</li>
 <li>The backup of your game progress and the record of your purchases</li>
 </ul>
-<p>Nothing is kept on our side. Payment records stay with the App Store or Google Play, and purchases like "No ads" can be restored from Settings.</p>
+<p>Nothing is kept on our side. Payment records stay with the App Store or Google Play, and purchases like “No ads” can be restored from Settings.</p>
 </section>
-<section id="tr" lang="tr">
+<section id="lang-tr" data-code="tr" lang="tr" dir="ltr" hidden>
 <h2>Block Nook hesabını sil</h2>
 <h3>Oyunun içinden</h3>
-<p>Ayarlar'ı aç, <b>Hesabı sil</b>'e dokun ve onayla. Hesabın ve çevrimiçi verilerin hemen silinir.</p>
+<p>Ayarlar'ı aç, “Hesabı sil”e dokun ve onayla. Hesabın ve çevrimiçi verilerin hemen silinir.</p>
 <h3>E-postayla</h3>
 <p>Ayarlar'da yazan Oyuncu ID'n ile <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> adresine yaz. Hesabı 30 gün içinde siler, bittiğinde haber veririz.</p>
 <h3>Silinenler</h3>
@@ -53,9 +57,195 @@
 <li>Görünen adın, avatarın, yıldızların ve sıralamadaki kaydın</li>
 <li>Oyun ilerlemenin yedeği ve satın alma kayıtların</li>
 </ul>
-<p>Bizde hiçbir şey kalmaz. Ödeme kayıtları App Store veya Google Play'de durur; "Reklamsız" gibi satın alımları Ayarlar'dan geri yükleyebilirsin.</p>
+<p>Bizde hiçbir şey kalmaz. Ödeme kayıtları App Store veya Google Play'de durur; “Reklamsız” gibi satın alımları Ayarlar'dan geri yükleyebilirsin.</p>
+</section>
+<section id="lang-de" data-code="de" lang="de" dir="ltr" hidden>
+<h2>Dein Block-Nook-Konto löschen</h2>
+<h3>Im Spiel</h3>
+<p>Öffne die Einstellungen, tippe auf „Konto löschen“ und bestätige. Dein Konto und deine Online-Daten werden sofort gelöscht.</p>
+<h3>Per E-Mail</h3>
+<p>Schreib an <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> und nenne die Spieler-ID aus den Einstellungen. Wir löschen das Konto innerhalb von 30 Tagen und melden uns, sobald es erledigt ist.</p>
+<h3>Was gelöscht wird</h3>
+<ul>
+<li>Dein anonymes Konto und, falls verknüpft, die Anmeldung mit Apple oder Google</li>
+<li>Anzeigename, Avatar, Sterne und Ranglisteneintrag</li>
+<li>Die Sicherung deines Spielfortschritts und die Nachweise deiner Käufe</li>
+</ul>
+<p>Bei uns bleibt nichts gespeichert. Zahlungsbelege liegen beim App Store oder bei Google Play, und Käufe wie „Keine Werbung“ kannst du in den Einstellungen wiederherstellen.</p>
+</section>
+<section id="lang-fr" data-code="fr" lang="fr" dir="ltr" hidden>
+<h2>Supprimer ton compte Block Nook</h2>
+<h3>Dans le jeu</h3>
+<p>Ouvre les Paramètres, touche « Supprimer le compte » et confirme. Ton compte et tes données en ligne sont supprimés immédiatement.</p>
+<h3>Par e-mail</h3>
+<p>Écris à <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> en indiquant l'ID joueur affiché dans les Paramètres. Nous supprimons le compte sous 30 jours et te répondons une fois que c'est fait.</p>
+<h3>Ce qui est supprimé</h3>
+<ul>
+<li>Ton compte anonyme et, s'il est associé, la connexion Apple ou Google</li>
+<li>Nom affiché, avatar, étoiles et place au classement</li>
+<li>La sauvegarde de ta progression et l'historique de tes achats</li>
+</ul>
+<p>Nous ne conservons rien. Les reçus de paiement restent chez l'App Store ou Google Play, et les achats comme « Sans pubs » peuvent être restaurés depuis les Paramètres.</p>
+</section>
+<section id="lang-es" data-code="es" lang="es" dir="ltr" hidden>
+<h2>Eliminar tu cuenta de Block Nook</h2>
+<h3>En el juego</h3>
+<p>Abre Ajustes, toca «Eliminar cuenta» y confirma. Tu cuenta y tus datos en línea se eliminan al instante.</p>
+<h3>Por correo</h3>
+<p>Escribe a <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> con el ID de jugador que aparece en Ajustes. Eliminamos la cuenta en un plazo de 30 días y te avisamos cuando esté hecho.</p>
+<h3>Qué se elimina</h3>
+<ul>
+<li>Tu cuenta anónima y, si la vinculaste, el inicio de sesión con Apple o Google</li>
+<li>Nombre visible, avatar, estrellas y puesto en el ranking</li>
+<li>La copia de seguridad de tu progreso y el registro de tus compras</li>
+</ul>
+<p>No conservamos nada. Los comprobantes de pago quedan en App Store o Google Play, y compras como «Sin anuncios» se pueden restaurar desde Ajustes.</p>
+</section>
+<section id="lang-it" data-code="it" lang="it" dir="ltr" hidden>
+<h2>Elimina il tuo account Block Nook</h2>
+<h3>Nel gioco</h3>
+<p>Apri le Impostazioni, tocca “Elimina account” e conferma. Il tuo account e i dati online vengono eliminati subito.</p>
+<h3>Via email</h3>
+<p>Scrivi a <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> indicando l'ID giocatore mostrato nelle Impostazioni. Eliminiamo l'account entro 30 giorni e ti rispondiamo quando è fatto.</p>
+<h3>Cosa viene eliminato</h3>
+<ul>
+<li>Il tuo account anonimo e, se collegato, l'accesso con Apple o Google</li>
+<li>Nome visualizzato, avatar, stelle e posizione in classifica</li>
+<li>Il backup dei tuoi progressi e il registro dei tuoi acquisti</li>
+</ul>
+<p>Non conserviamo nulla. Le ricevute di pagamento restano su App Store o Google Play, e acquisti come “Niente pubblicità” si possono ripristinare dalle Impostazioni.</p>
+</section>
+<section id="lang-pt" data-code="pt" lang="pt" dir="ltr" hidden>
+<h2>Excluir sua conta do Block Nook</h2>
+<h3>No jogo</h3>
+<p>Abra as Configurações, toque em “Excluir conta” e confirme. Sua conta e seus dados on-line são excluídos na hora.</p>
+<h3>Por e-mail</h3>
+<p>Escreva para <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> com o ID do jogador mostrado nas Configurações. Excluímos a conta em até 30 dias e avisamos quando estiver feito.</p>
+<h3>O que é excluído</h3>
+<ul>
+<li>Sua conta anônima e, se vinculado, o login com a Apple ou o Google</li>
+<li>Nome de exibição, avatar, estrelas e posição no ranking</li>
+<li>A cópia de segurança do seu progresso e o registro das suas compras</li>
+</ul>
+<p>Não guardamos nada. Os comprovantes de pagamento ficam na App Store ou no Google Play, e compras como “Sem anúncios” podem ser restauradas nas Configurações.</p>
+</section>
+<section id="lang-ru" data-code="ru" lang="ru" dir="ltr" hidden>
+<h2>Удаление аккаунта Block Nook</h2>
+<h3>В игре</h3>
+<p>Открой Настройки, нажми «Удалить аккаунт» и подтверди. Аккаунт и онлайн-данные удаляются сразу.</p>
+<h3>По электронной почте</h3>
+<p>Напиши на <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> и укажи ID игрока из Настроек. Мы удалим аккаунт в течение 30 дней и сообщим, когда всё будет готово.</p>
+<h3>Что удаляется</h3>
+<ul>
+<li>Твой анонимный аккаунт и, если он привязан, вход через Apple или Google</li>
+<li>Отображаемое имя, аватар, звёзды и место в рейтинге</li>
+<li>Резервная копия прогресса и записи о покупках</li>
+</ul>
+<p>У нас ничего не остаётся. Платёжные данные хранятся в App Store или Google Play, а покупки вроде «Без рекламы» можно восстановить в Настройках.</p>
+</section>
+<section id="lang-ar" data-code="ar" lang="ar" dir="rtl" hidden>
+<h2>حذف حسابك في Block Nook</h2>
+<h3>من داخل اللعبة</h3>
+<p>افتح الإعدادات واضغط على "حذف الحساب" ثم أكّد. يُحذف حسابك وبياناتك عبر الإنترنت فورًا.</p>
+<h3>عبر البريد الإلكتروني</h3>
+<p>راسلنا على <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> مع معرّف اللاعب الظاهر في الإعدادات. نحذف الحساب خلال 30 يومًا ونخبرك عند الانتهاء.</p>
+<h3>ما الذي يُحذف</h3>
+<ul>
+<li>حسابك المجهول، وتسجيل الدخول عبر Apple أو Google إن كنت ربطته</li>
+<li>الاسم الظاهر والصورة الرمزية والنجوم ومكانك في الترتيب</li>
+<li>النسخة الاحتياطية من تقدّمك وسجل مشترياتك</li>
+</ul>
+<p>لا نحتفظ بأي شيء. تبقى سجلات الدفع لدى App Store أو Google Play، ويمكن استعادة مشتريات مثل "بلا إعلانات" من الإعدادات.</p>
+</section>
+<section id="lang-hi" data-code="hi" lang="hi" dir="ltr" hidden>
+<h2>अपना Block Nook खाता हटाएँ</h2>
+<h3>गेम के अंदर से</h3>
+<p>सेटिंग्स खोलें, “खाता हटाएँ” पर टैप करें और पुष्टि करें। आपका खाता और ऑनलाइन डेटा तुरंत हट जाता है।</p>
+<h3>ईमेल से</h3>
+<p>सेटिंग्स में दिखने वाली खिलाड़ी ID के साथ <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> पर लिखें। हम 30 दिनों के अंदर खाता हटा देते हैं और काम पूरा होने पर जवाब देते हैं।</p>
+<h3>क्या हटाया जाता है</h3>
+<ul>
+<li>आपका गुमनाम खाता और, अगर जोड़ा था, तो Apple या Google साइन-इन</li>
+<li>दिखने वाला नाम, अवतार, सितारे और रैंकिंग</li>
+<li>आपकी गेम प्रगति का बैकअप और आपकी खरीदारी का रिकॉर्ड</li>
+</ul>
+<p>हमारे पास कुछ नहीं रहता। भुगतान के रिकॉर्ड App Store या Google Play में रहते हैं, और “विज्ञापन हटाएँ” जैसी खरीदारी सेटिंग्स से बहाल की जा सकती है।</p>
+</section>
+<section id="lang-ja" data-code="ja" lang="ja" dir="ltr" hidden>
+<h2>Block Nook のアカウントを削除する</h2>
+<h3>ゲーム内で</h3>
+<p>設定を開き、「アカウントを削除」をタップして確認します。アカウントとオンラインデータはすぐに削除されます。</p>
+<h3>メールで</h3>
+<p>設定に表示されるプレイヤーIDを添えて <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> にご連絡ください。30日以内にアカウントを削除し、完了したらお知らせします。</p>
+<h3>削除されるもの</h3>
+<ul>
+<li>匿名アカウントと、連携している場合は Apple または Google のログイン</li>
+<li>表示名、アバター、星、ランキングの記録</li>
+<li>ゲーム進行状況のバックアップと購入記録</li>
+</ul>
+<p>当方には何も残りません。支払いの記録は App Store または Google Play に残り、「広告なし」などの購入は設定から復元できます。</p>
+</section>
+<section id="lang-ko" data-code="ko" lang="ko" dir="ltr" hidden>
+<h2>Block Nook 계정 삭제</h2>
+<h3>게임에서</h3>
+<p>설정을 열고 "계정 삭제"를 탭한 뒤 확인하세요. 계정과 온라인 데이터가 바로 삭제됩니다.</p>
+<h3>이메일로</h3>
+<p>설정에 표시된 플레이어 ID와 함께 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a>로 메일을 보내 주세요. 30일 이내에 계정을 삭제하고 완료되면 알려 드립니다.</p>
+<h3>삭제되는 항목</h3>
+<ul>
+<li>익명 계정, 그리고 연결했다면 Apple 또는 Google 로그인</li>
+<li>표시 이름, 아바타, 별, 랭킹 기록</li>
+<li>게임 진행 상황 백업과 구매 기록</li>
+</ul>
+<p>저희에게는 아무것도 남지 않습니다. 결제 기록은 App Store 또는 Google Play에 남으며, "광고 제거" 같은 구매는 설정에서 복원할 수 있습니다.</p>
+</section>
+<section id="lang-zh" data-code="zh" lang="zh" dir="ltr" hidden>
+<h2>删除你的 Block Nook 账号</h2>
+<h3>在游戏中</h3>
+<p>打开设置，点击“删除账号”并确认。你的账号和在线数据会立即删除。</p>
+<h3>通过邮件</h3>
+<p>发送邮件至 <a href="mailto:bskdev28@gmail.com">bskdev28@gmail.com</a> 并附上设置中显示的玩家 ID。我们会在 30 天内删除账号，完成后回复你。</p>
+<h3>会删除哪些内容</h3>
+<ul>
+<li>你的匿名账号，以及已关联的 Apple 或 Google 登录</li>
+<li>显示名称、头像、星星和排行榜记录</li>
+<li>你的游戏进度备份和购买记录</li>
+</ul>
+<p>我们不会保留任何数据。付款记录保留在 App Store 或 Google Play 中，“去除广告”等购买可以在设置中恢复。</p>
 </section>
 </main>
 <footer>© 2026 BSKDev</footer>
+<script>
+(function () {
+  var codes = Array.prototype.map.call(document.querySelectorAll('section[data-code]'), function (s) {
+    return s.getAttribute('data-code');
+  });
+  function pick() {
+    var hash = location.hash.replace('#', '');
+    if (codes.indexOf(hash) >= 0) return hash;
+    var prefs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < prefs.length; i++) {
+      var short = prefs[i].toLowerCase().split('-')[0];
+      if (codes.indexOf(short) >= 0) return short;
+    }
+    return 'en';
+  }
+  function show(code) {
+    codes.forEach(function (c) { document.getElementById('lang-' + c).hidden = c !== code; });
+    document.querySelectorAll('.langs button').forEach(function (b) {
+      var on = b.getAttribute('data-lang') === code;
+      b.classList.toggle('on', on);
+      if (on) b.scrollIntoView({ block: 'nearest', inline: 'center' });
+    });
+    document.querySelectorAll('a.keep-lang').forEach(function (a) { a.hash = code; });
+    document.documentElement.lang = code;
+    if (history.replaceState) history.replaceState(null, '', '#' + code);
+  }
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
+  });
+  show(pick());
+})();
+</script>
 </body>
 </html>
